@@ -154,5 +154,24 @@ def get_post(post_id):
 
 
 
+### 2-2. HTTP Method
+
+HTTP에는 여러 개의 메소드가 있는데, 그 중 가장 많이 사용되는 것들은 GET, POST, PUT, DELETE이다. GET은 정보를 가져올 때, POST는 새로운 정보를 삽입할 때, PUT은 수정, 그리고 DELETE는 정보를 삭제할 때 사용하는 것이 가장 일반적인 사용법이다.
+
+Flask에서는 각 URL별로 허용하는 메소드를 지정할 수 있고, 요청을 받은 메소드에 따라 다른 행동을 취하도록 개발할 수 있다. `@app.route` 데코레이터에서 `methods`에 메소드 리스트를 인자로 넘기면 그 함수에서는 해당 메소드만을 처리한다. 허용되지 않은 메소드로 요청을 보내면 '405 Method Not Allowed' 에러가 발생한다.
+
+```
+@app.route('/login', methods=['GET', 'POST'])
+def login():
+	if request.method == 'GET':
+		return 'Show login form'
+
+	elif request.method == 'POST':
+		return 'Do login'
+```
+
+
+
+
 [1]: [http://jinja.pocoo.org/docs/] "Jinja2 Documentation"
 [2]: [http://werkzeug.pocoo.org/docs/] "Werkzeug Documentation"

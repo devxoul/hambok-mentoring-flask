@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-from flask import Flask
+from flask import Flask, request
 import os
 
 PORT = 5000
@@ -25,6 +25,14 @@ def get_user(username):
 @app.route('/post/<int:post_id>')
 def get_post(post_id):
 	return 'Post %d' % post_id
+
+@app.route('/login', methods=['GET', 'POST'])
+def login():
+	if request.method == 'GET':
+		return 'Show login form'
+
+	elif request.method == 'POST':
+		return 'Do login'
 
 if __name__ == '__main__':
 	app.run(port=PORT)

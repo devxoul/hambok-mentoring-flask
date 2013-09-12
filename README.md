@@ -106,5 +106,53 @@ app.run(host='0.0.0.0', port=8080)
 
 
 
+---
+
+
+
+## 2. Flask 익히기
+
+### 2-1. Route
+
+Flask에서는 매우 직관적인 URL Routing을 지원한다. 첫 번째 Hello World 예제에서도 볼 수 있듯, `@app.route` 데코레이터(Decorator)로 함수를 지정하면, 그 함수에서 리턴한 결과가 실제로 클라이언트로 전송된다.
+
+그럼, 작성한 코드를 아래와 같이 변경해보자.
+
+```
+@app.route('/')
+def index():
+	return 'It Works!'
+	
+@app.route('/hello')
+def hello():
+	return 'Hello, World!'
+```
+
+그리고, 인터넷 브라우저에서 <http://127.0.0.1:5000>과 <http://127.0.0.1:5000/hello>에 접속해보자. 각각 'It Works!'와 'Hello, World!'가 보이는 것을 확인할 수 있다.
+
+이번에는 동적 URL을 다루기 위해 아래의 코드를 추가시켜보자.
+
+```
+@app.route('/user/<username>')
+def get_user(username):
+	return 'User %s' % username
+```
+
+인터넷 브라우저에서 <http://127.0.0.1:5000/user/xoul>로 접속해보자.'User xoul'이라는 결과를 볼 수 있다. URL을 지정해줄 때 '<'와 '>' 사이에 있는 변수가 함수의 인자로 넘어오게 된다. 변수가 여러 개라면 여러 개의 함수 인자를 선언해주면 된다.
+
+만약 변수가 정수형이라면, `int:`를 추가시켜주면 된다.
+
+```
+@app.route('/post/<int:post_id>')
+def get_post(post_id):
+	return 'Post %d' % post_id
+```
+
+#### 한글 대응하기
+
+만약 username에 영문이 아닌 유니코드를 입력하게되면 Python에러가 출력될 것이다. 유니코드를 처리하지 않아서 발생하는 에러인데, hello.py의 제일 윗줄에 `# -*- coding: utf-8 -*-`을 추가시켜주면 된다.
+
+
+
 [1]: [http://jinja.pocoo.org/docs/] "Jinja2 Documentation"
 [2]: [http://werkzeug.pocoo.org/docs/] "Werkzeug Documentation"

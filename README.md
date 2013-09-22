@@ -59,7 +59,7 @@ Werkzeug (0.9.4)
 wsgiref (0.1.2)
 ```
 
-Flask를 설치하면 Jinja2, Werkzeug 등 다른 패키지들도 함께 설치되는데, 이는 Flask가 해당 패키지들을 기본적으로 사용하고 있기 때문이다. [Jinja2][1]는 템플릿 엔진이고, [Werkzeug][2]는 WSGI 툴킷이다.
+Flask를 설치하면 Jinja2, Werkzeug 등 다른 패키지들도 함께 설치되는데, 이는 Flask가 해당 패키지들을 기본적으로 사용하고 있기 때문이다. [Jinja2](http://jinja.pocoo.org/docs/)는 템플릿 엔진이고, [Werkzeug](http://werkzeug.pocoo.org/docs/)는 WSGI 툴킷이다.
 
 
 
@@ -160,7 +160,11 @@ HTTP에는 여러 개의 메소드가 있는데, 그 중 가장 많이 사용되
 
 Flask에서는 각 URL별로 허용하는 메소드를 지정할 수 있고, 요청을 받은 메소드에 따라 다른 행동을 취하도록 개발할 수 있다. `@app.route` 데코레이터에서 `methods`에 메소드 리스트를 인자로 넘기면 그 함수에서는 해당 메소드만을 처리한다. 허용되지 않은 메소드로 요청을 보내면 '405 Method Not Allowed' 에러가 발생한다.
 
+어떤 메소드로 요청이 들어왔는지를 확인하려면 `request`객체의 `method`를 확인해보면 된다. `request`를 사용하려면 아래와 같이 import를 해주어야 한다.
+
 ```
+from flask import Flask, request
+
 @app.route('/login', methods=['GET', 'POST'])
 def login():
 	if request.method == 'GET':
@@ -172,6 +176,7 @@ def login():
 
 
 
+### 2-3. 데이터 받아오기
 
-[1]: [http://jinja.pocoo.org/docs/] "Jinja2 Documentation"
-[2]: [http://werkzeug.pocoo.org/docs/] "Werkzeug Documentation"
+
+URL을 통해 들어오는 정보 외에, 

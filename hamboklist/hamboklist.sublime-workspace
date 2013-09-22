@@ -1,0 +1,861 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"a",
+				"abc"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "hamboklist/__init__.py",
+			"settings":
+			{
+				"buffer_size": 0,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "Hippo",
+	"command_palette":
+	{
+		"height": 67.0,
+		"selected_items":
+		[
+			[
+				"list pac",
+				"Package Control: List Packages"
+			],
+			[
+				"package control list",
+				"Package Control: List Packages"
+			],
+			[
+				"sftp",
+				"Preferences: SFTP Key Bindings"
+			],
+			[
+				"install pak",
+				"Package Control: Install Package"
+			],
+			[
+				"list",
+				"Package Control: List Packages"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
+			[
+				"",
+				"About"
+			],
+			[
+				"install p",
+				"Package Control: Install Package"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"install pa",
+				"Package Control: Install Package"
+			],
+			[
+				"add",
+				"Project: Add Folder"
+			],
+			[
+				"packa",
+				"Package Control: Install Package"
+			],
+			[
+				"package control: install package",
+				"Package Control: Install Package"
+			],
+			[
+				"package control: install pa",
+				"Package Control: Install Package"
+			],
+			[
+				"page",
+				"Package Control: Install Package"
+			],
+			[
+				"package cot",
+				"Package Control: Install Package"
+			],
+			[
+				"package control: inst",
+				"Package Control: Install Package"
+			],
+			[
+				"pac",
+				"Package Control: Install Package"
+			],
+			[
+				"package contro: insta",
+				"Package Control: Install Package"
+			],
+			[
+				"install ",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 521.0
+	},
+	"console":
+	{
+		"height": 125.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Volumes/XOUL/workspace/hippo/hippo/config/error.py",
+		"/Volumes/XOUL/workspace/hippo/hippo.ini",
+		"/Volumes/XOUL/workspace/hippo/hippo/model.py",
+		"/Volumes/XOUL/workspace/hippo/hippo/utils.py",
+		"/Volumes/XOUL/workspace/hippo/hippo/crawler/naver_crawler.py",
+		"/Volumes/XOUL/workspace/hippo/hippo/__init__.py",
+		"/Volumes/XOUL/workspace/hippo/hippo/views/web.py",
+		"/Volumes/XOUL/workspace/hippo/hippo/crawler/daum_crawler.py",
+		"/Volumes/XOUL/workspace/hippo/hippo/crawler/__init__.py",
+		"/Volumes/XOUL/workspace/hippo/hippo/database_uri.py",
+		"/Volumes/XOUL/workspace/hippo/hippo/database.py",
+		"/Volumes/XOUL/workspace/hippo/hippo/static/js/hippo.js",
+		"/Volumes/XOUL/workspace/hippo/hippo/static/css/hippo.css",
+		"/Volumes/XOUL/workspace/hippo/hippo/templates/webtoon_detail.html",
+		"/Volumes/XOUL/workspace/hippo/hippo/templates/layout.html",
+		"/Volumes/XOUL/workspace/hippo/hippo/templates/webtoon_viewer.html",
+		"/Users/xoul/Library/Application Support/Sublime Text 2/Packages/User/SFTP.sublime-settings",
+		"/Volumes/XOUL/workspace/hippo/hippo/controller.py",
+		"/Volumes/XOUL/workspace/hippo/hippo/templates/webtoon_list.html",
+		"/Volumes/XOUL/workspace/hippo/hippo/static/css/bootstrap.min.css",
+		"/Volumes/XOUL/workspace/hippo/hippo/tasks.py",
+		"/Volumes/XOUL/workspace/hippo/hippo/views/api.py",
+		"/Volumes/XOUL/workspace/hippo/crawl.py",
+		"/Volumes/XOUL/workspace/hippo/hippo-web/hippo/model.py",
+		"/Volumes/XOUL/workspace/hippo/hippo-web/hippo/crawler/daum_crawler.py",
+		"/Volumes/XOUL/workspace/Hippo/hippo-web/crawl.py",
+		"/Volumes/XOUL/workspace/Hippo/hippo-web/sftp-config.json",
+		"/Volumes/XOUL/workspace/hippo/hippo-web/hippo.sublime-project",
+		"/Users/xoul/Desktop/res.txt",
+		"/Volumes/XOUL/workspace/hippo/sftp-config.json",
+		"/Users/xoul/Library/Application Support/Sublime Text 2/Packages/SFTP/Default (OSX).sublime-keymap",
+		"/Users/xoul/Library/Application Support/Sublime Text 2/Packages/User/Preferences.sublime-settings",
+		"/Volumes/XOUL/workspace/hippo/celeryd",
+		"/Volumes/XOUL/workspace/hippo/parse.py",
+		"/Volumes/XOUL/workspace/hippo/hippo.sublime-project",
+		"/Volumes/XOUL/workspace/hippo/README.md",
+		"/Volumes/XOUL/workspace/hippo/hippo/static/js/webtoolkit.sha1.js",
+		"/Volumes/XOUL/workspace/hippo/alembic/versions/14e527ec27fe_added_column_no_at_t.py",
+		"/Volumes/XOUL/workspace/hippo/db/search.db/Webtoon/_MAIN_0.toc",
+		"/Volumes/XOUL/workspace/hippo/run",
+		"/Volumes/XOUL/workspace/hippo/celeryd.conf",
+		"/Volumes/XOUL/workspace/hippo/runcelery",
+		"/Volumes/XOUL/workspace/hippo/run.sh",
+		"/Volumes/XOUL/workspace/hippo/hippo/crawler/tasks.py",
+		"/Volumes/XOUL/workspace/hippo/hippo/static/js/jquery.loadasync.js",
+		"/Volumes/XOUL/workspace/hippo/hippo/static/js/base64.js",
+		"/Volumes/XOUL/workspace/hippo/hippo/static/js/knockout.mapping-latest.js",
+		"/Volumes/XOUL/workspace/hippo/hippo/static/js/knockout-2.3.0.js",
+		"/Volumes/XOUL/workspace/hippo/hippo/static/js/bootstrap.min.js",
+		"/Volumes/XOUL/workspace/hippo/hippo/static/js/jquery-1.10.2.min.js",
+		"/Volumes/XOUL/workspace/hippo/venv/lib/python2.7/site-packages/kombu/transport/django/management/__init__.py",
+		"/Volumes/XOUL/workspace/hippo/reload.sh",
+		"/Volumes/XOUL/workspace/hippo/run_celery",
+		"/Volumes/XOUL/workspace/hippo/hippo/crawlers/tasks.py",
+		"/Volumes/XOUL/workspace/hippo/hippo/crawlers/naver_crawler.py",
+		"/Volumes/XOUL/workspace/hippo/runserver.py",
+		"/Users/xoul/Library/Application Support/Sublime Text 2/Packages/User/Python Virtual Environment.sublime-build",
+		"/Users/xoul/Library/Application Support/Sublime Text 2/Packages/Python/Python.sublime-build",
+		"/Volumes/XOUL/workspace/hippo/hippo/crawlers/__init__.py",
+		"/Volumes/XOUL/workspace/hippo/.gitignore",
+		"/Users/xoul/Library/Application Support/Sublime Text 2/Packages/Default/Default (OSX).sublime-keymap",
+		"/Users/xoul/Library/Application Support/Sublime Text 2/Packages/Default/Preferences.sublime-settings",
+		"/Users/xoul/Library/Application Support/Sublime Text 2/Packages/User/Default (OSX).sublime-keymap",
+		"/Users/xoul/Desktop/test.py",
+		"/Users/xoul/Library/Application Support/Sublime Text 2/Packages/SideBarEnhancements/messages/11.13.2012.1305.0.txt",
+		"/Users/xoul/Desktop/asd.py",
+		"/Volumes/XOUL/workspace/Sleep If U Can/SleepIfUCan/SleepIfUCan-Info.plist",
+		"/Volumes/XOUL/workspace/Smarteen/smarteen-photo-contest/contest/model.py",
+		"/Volumes/XOUL/Dropbox/Joyfl/Projects/Dish by.me/Documents/Distribution/appstore description.txt",
+		"/Volumes/XOUL/workspace/Smarteen/smarteen-photo-contest/LICENSE.txt",
+		"/Volumes/XOUL/workspace/Smarteen/mentors/LICENSE.txt",
+		"/Volumes/XOUL/workspace/Smarteen/smarteen-photo-contest/contest/views/web.py",
+		"/Volumes/XOUL/workspace/Smarteen/smarteen-photo-contest/contest/__init__.py",
+		"/Users/xoul/Desktop/답변.txt",
+		"/Users/xoul/Desktop/회장단.txt",
+		"/Users/xoul/Desktop/개발사멘토.txt",
+		"/Users/xoul/Desktop/교육.txt",
+		"/Users/xoul/Downloads/tmp_asdf.txt",
+		"/Users/xoul/Downloads/MealService/MealService.as",
+		"/Users/xoul/Desktop/code.txt",
+		"/Users/xoul/Downloads/appstore description.txt",
+		"/Volumes/XOUL/Dropbox/Joyfl/Projects/Binary Archive/조사.txt",
+		"/Users/xoul/Desktop/web.xml",
+		"/Volumes/XOUL/Dropbox/Projects/Fanpple/Documents/iOS Test Device UDID.txt",
+		"/Users/xoul/Downloads/Multiple-Upload-Samples/multiple-device-upload-ios.deviceids",
+		"/Users/xoul/Downloads/wiki.txt",
+		"/Users/xoul/Desktop/response.json",
+		"/Users/xoul/Desktop/acuros.txt",
+		"/Users/xoul/Desktop/KisMAC/DumpLog 13-06-18 18:53",
+		"/Volumes/XOUL/workspace/Dish by.me/Dish by.me/Resources/agreement.html",
+		"/Users/xoul/Downloads/agreement.html",
+		"/Users/xoul/Downloads/약관110814.txt",
+		"/Volumes/XOUL/Dropbox/Joyfl/Projects/Sleep If U Can/번역파일/values-ja/strings.xml",
+		"/Users/xoul/Desktop/shake.csv",
+		"/Users/xoul/Desktop/shake.txt",
+		"/Users/xoul/Desktop/Joyfl.txt",
+		"/Users/xoul/Downloads/manifest.plist",
+		"/Volumes/XOUL/Dropbox/기타악보/버스커버스커 - 정류장.txt",
+		"/Volumes/XOUL/Dropbox/기타악보/사랑은 어쩔수 없네요.txt",
+		"/Applications/League of Legends.app/Contents/LOL/RADS/system/locale.cfg",
+		"/Users/xoul/Downloads/전설의 주먹 (Legendary Fist, 2013) DVDRip.720p.5.1CH.DRM/필히 전용코덱을 다운받으세요.txt",
+		"/Users/xoul/Desktop/fasd.html",
+		"/Users/xoul/Desktop/asdasd.html",
+		"/Users/xoul/Desktop/mat.c",
+		"/Users/xoul/Library/Preferences/IdeaIC12/options/jdk.table.xml",
+		"/Users/xoul/Library/Application Support/IdeaIC12/availables.xml",
+		"/Users/xoul/Desktop/wtf.html",
+		"/Users/xoul/Downloads/facebook (1).txt",
+		"/Users/xoul/Downloads/facebook.txt",
+		"/Users/xoul/Desktop/fuck.html",
+		"/Volumes/XOUL/Dropbox/Public/Fanpple/index.html",
+		"/Users/xoul/Desktop/asdasd.txt",
+		"/Users/xoul/Desktop/push.py",
+		"/Volumes/XOUL/workspace/Dish by.me/Dish by.me/Dish by.me/Dish by.me-Info.plist",
+		"/Users/xoul/Downloads/Back_to_the_Mac_20120805.css",
+		"/Users/xoul/Desktop/일요일 저녁까지 발표자료 초안.txt",
+		"/Users/xoul/Downloads/DTCoreText/Demo/Resources/About2.html",
+		"/Users/xoul/Downloads/DTCoreText/Demo/Resources/About.html",
+		"/Users/xoul/Desktop/card.txt",
+		"/Users/xoul/Downloads/KB_거래내역조회(215402-04-054274_20130416214320).xls",
+		"/Users/xoul/Desktop/iTunes Music Library.xml",
+		"/Volumes/XOUL/Music/iTunes/iTunes Music Library.xml"
+	],
+	"find":
+	{
+		"height": 35.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"read",
+			"get_bookmark",
+			"token",
+			"DEVICE_TOKEN",
+			"device_token",
+			"evice.token",
+			"token",
+			"device_os",
+			"os",
+			"ALREADY_SUBSCRIBED",
+			"read",
+			"subscription",
+			"request",
+			"request.",
+			"existing_subscription",
+			"datetime.now",
+			"datetime,now",
+			"datetime.datetime",
+			"datetime",
+			"INVALID_DEVICE_OS",
+			"NEED_DEVICE_OS",
+			"db.Column(db.DateTime, default=datetime.now(), nullable=False)",
+			"datetime",
+			"db.relationship",
+			"date",
+			"ate",
+			"hippo",
+			"revision",
+			"portal",
+			"load",
+			"url",
+			"viewer",
+			"40px",
+			"40",
+			"검색",
+			"-15",
+			"15",
+			"-15",
+			"$(document)",
+			"2",
+			", ",
+			"week_menu",
+			"container-fluid",
+			"not Webtoon.finished",
+			" == True",
+			"webtoons",
+			"datetime.datetime",
+			"title",
+			"changed",
+			"badge",
+			"fuck",
+			"commit_db",
+			"already_episode",
+			"[Naver] ",
+			"print (.*)",
+			"print\\((.*)\\)",
+			"logger.info('[Daum] ",
+			"logger.info('[Daum]",
+			"logger.log",
+			"print\\((.+)\\)",
+			"print (.+)",
+			"%",
+			"already_episode",
+			"mon",
+			"naver",
+			"NAver",
+			"logger.info",
+			"naver.net",
+			".net",
+			"datetime",
+			"re",
+			"portal_id",
+			"episode",
+			"3-08-30 15:06:43,162: ERROR/MainProcess] Task hippo.crawler.crawl[c4",
+			"proxy",
+			"thumb",
+			"thumbnail",
+			"thumb",
+			"proxy",
+			"thumbnail",
+			"logger.info",
+			"concu",
+			"date",
+			"webtoons",
+			"\\[Naver\\]",
+			"달세",
+			"70",
+			"#",
+			"pageN",
+			" == 0",
+			"signup",
+			"reload",
+			"has_key",
+			"msg",
+			"([a-z]+)-(msg)",
+			"([a-z]+)_(msg)",
+			"_msg",
+			"login",
+			"facebook_signup_button",
+			"login",
+			"form\\['([a-z_]+)'\\]",
+			"form\\['[a-z_]+'\\]",
+			"\\.has_key\\('([a-z_]+)'\\)",
+			"form.get\\('(.+)'\\)",
+			"NEED_EMAIL",
+			" ",
+			"request.form",
+			"error(",
+			"error(1200",
+			"error(",
+			"loginWith",
+			", nullable=True",
+			"login_button",
+			"query",
+			"myModalLabel",
+			"login_modal",
+			"완결",
+			"페이스북으",
+			"페이스북으로",
+			"login_modal",
+			"내 웹",
+			"'fin'",
+			"filter",
+			"nav",
+			"월요일",
+			"query",
+			"new_count",
+			"get_webtoons"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"DEVICE_UUID",
+			"device_uuid",
+			"evice.uuid",
+			"datetime",
+			"",
+			"log($1)",
+			"log('",
+			"log",
+			"logger.info",
+			"logger.log($1)",
+			"print",
+			"[Daum]",
+			"get",
+			"$2-$1",
+			"$1-$2",
+			"form.get('$1')",
+			"['$1']",
+			"form['$1']",
+			"login",
+			"logger.info($1)",
+			"Done",
+			"myproject",
+			"tasks.test_task",
+			"",
+			"subscribed()",
+			"webtoon_filter",
+			"if filter",
+			"thumbnail_url",
+			"webtoons",
+			",",
+			"",
+			" M",
+			"",
+			"X",
+			"123",
+			"</p>\\n<p>$2</p>\\n",
+			"</h2>\\n<p>$1</p>\\n",
+			"</h2>\\n<p>$1</p>",
+			"<h2>$1</h2>\\n",
+			"<h2>$1</h2>",
+			"<h2>$1</h2>\\n",
+			"<h1>$1</h1>\\n",
+			"<h1>$1</h1>",
+			"colorpicker",
+			"$1",
+			"",
+			"$1, ",
+			"1$, ",
+			"$1, ",
+			"",
+			"self.",
+			"self",
+			"\\\"",
+			"%20",
+			"\\t",
+			"",
+			"\\t",
+			"\\t$1",
+			"ATM출금\\t\\nATM출금",
+			"\\t",
+			"\\t$1",
+			"ATM출금\\nATM출금",
+			"\\t",
+			"\\t$1",
+			"ATM출금\\nATM출금",
+			"\\t",
+			"\\t$1",
+			"ATM출금\\nATM출금",
+			"\\t",
+			"\\t$1",
+			"$1\\t",
+			"\\t",
+			"\\t$1",
+			"file://localhost/Volumes/XOUL/Music",
+			"\\n\\t",
+			"$1"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "hamboklist/__init__.py",
+					"settings":
+					{
+						"buffer_size": 0,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"annotations":
+							[
+								"TODO",
+								"README",
+								"FIXME"
+							],
+							"bh_regions":
+							[
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close"
+							],
+							"csslint_options":
+							{
+								"adjoining-classes": "warning",
+								"box-model": true,
+								"box-sizing": "warning",
+								"compatible-vendor-prefixes": "warning",
+								"display-property-grouping": true,
+								"duplicate-background-images": "warning",
+								"duplicate-properties": true,
+								"empty-rules": true,
+								"errors": true,
+								"fallback-colors": "warning",
+								"floats": "warning",
+								"font-faces": "warning",
+								"font-sizes": "warning",
+								"gradients": "warning",
+								"ids": "warning",
+								"import": "warning",
+								"important": "warning",
+								"known-properties": true,
+								"outline-none": "warning",
+								"overqualified-elements": "warning",
+								"qualified-headings": "warning",
+								"regex-selectors": "warning",
+								"rules-count": "warning",
+								"shorthand": "warning",
+								"star-property-hack": "warning",
+								"text-indent": "warning",
+								"underscore-property-hack": "warning",
+								"unique-headings": "warning",
+								"universal-selector": "warning",
+								"vendor-prefix": true,
+								"zero-units": "warning"
+							},
+							"gjslint_ignore":
+							[
+								110.0
+							],
+							"gjslint_options":
+							[
+							],
+							"incomplete_sync": null,
+							"javascript_linter": "jshint",
+							"jshint_options":
+							{
+								"browser": true,
+								"evil": true,
+								"regexdash": true,
+								"sub": true,
+								"trailing": true,
+								"wsh": true
+							},
+							"pep8": true,
+							"pep8_ignore":
+							[
+								"E501"
+							],
+							"perl_linter": "perlcritic",
+							"pyflakes_ignore":
+							[
+							],
+							"pyflakes_ignore_import_*": true,
+							"remote_loading": false,
+							"sublimelinter": true,
+							"sublimelinter_delay": 2.0,
+							"sublimelinter_disable":
+							[
+							],
+							"sublimelinter_executable_map":
+							{
+							},
+							"sublimelinter_fill_outlines": false,
+							"sublimelinter_gutter_marks": true,
+							"sublimelinter_gutter_marks_theme": "simple",
+							"sublimelinter_mark_style": "none",
+							"sublimelinter_notes": false,
+							"sublimelinter_objj_check_ascii": false,
+							"sublimelinter_popup_errors_on_save": false,
+							"sublimelinter_syntax_map":
+							{
+								"C++": "c",
+								"Python Django": "python",
+								"Ruby on Rails": "ruby"
+							},
+							"sublimelinter_wrap_find": true,
+							"synced": false,
+							"syntax": "Packages/Python/Python.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 34.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 100.0
+	},
+	"output.sftp":
+	{
+		"height": 100.0
+	},
+	"replace":
+	{
+		"height": 64.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+			[
+				"utils",
+				"hippo/utils.py"
+			],
+			[
+				"model",
+				"hippo/model.py"
+			],
+			[
+				"hippo.i",
+				"hippo.ini"
+			],
+			[
+				"naver_c",
+				"hippo/crawler/naver_crawler.py"
+			],
+			[
+				"er",
+				"hippo/config/error.py"
+			],
+			[
+				"error",
+				"hippo/config/error.py"
+			],
+			[
+				"__init",
+				"hippo/__init__.py"
+			],
+			[
+				"database",
+				"hippo/database_uri.py"
+			],
+			[
+				"data",
+				"hippo/database_uri.py"
+			],
+			[
+				"__",
+				"hippo/__init__.py"
+			],
+			[
+				"__init__",
+				"hippo/__init__.py"
+			],
+			[
+				"daum",
+				"hippo/crawler/daum_crawler.py"
+			],
+			[
+				"naver",
+				"hippo/crawler/naver_crawler.py"
+			],
+			[
+				"web.py",
+				"hippo/views/web.py"
+			],
+			[
+				"cont",
+				"hippo/controller.py"
+			],
+			[
+				"api",
+				"hippo/views/api.py"
+			],
+			[
+				"detail",
+				"hippo/templates/webtoon_detail.html"
+			],
+			[
+				"hippo.js",
+				"hippo/static/js/hippo.js"
+			],
+			[
+				"web",
+				"hippo/views/web.py"
+			],
+			[
+				"viewer",
+				"hippo/templates/webtoon_viewer.html"
+			],
+			[
+				"layout",
+				"hippo/templates/layout.html"
+			],
+			[
+				"hippo.css",
+				"hippo/static/css/hippo.css"
+			],
+			[
+				".css",
+				"hippo/static/css/bootstrap.min.css"
+			],
+			[
+				"bootstrap",
+				"hippo/static/css/bootstrap.min.css"
+			],
+			[
+				"controller",
+				"hippo/controller.py"
+			],
+			[
+				"web.p",
+				"hippo/views/web.py"
+			],
+			[
+				"list.html",
+				"hippo/templates/webtoon_list.html"
+			],
+			[
+				"ut",
+				"hippo/utils.py"
+			],
+			[
+				"tasks",
+				"hippo/tasks.py"
+			],
+			[
+				"webtoon_list",
+				"hippo/templates/webtoon_list.html"
+			],
+			[
+				"craw",
+				"crawl.py"
+			],
+			[
+				"crawl",
+				"hippo/crawler/__init__.py"
+			],
+			[
+				"detail.html",
+				"hippo/templates/webtoon_detail.html"
+			],
+			[
+				"webtoon_",
+				"hippo/templates/webtoon_list.html"
+			],
+			[
+				"contro",
+				"hippo/controller.py"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"selected_items":
+		[
+		],
+		"width": 380.0
+	},
+	"show_minimap": false,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 256.0,
+	"status_bar_visible": true
+}

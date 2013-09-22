@@ -1,0 +1,16 @@
+{
+	"build_systems":
+	[
+		{
+			"cmd":["$project_path/venv/bin/python","$project_path/hamboklist/__init__.py"],
+			"name": "Hamboklist",
+			"working_dir": "$project_path"
+		}
+	],
+	"folders":
+	[
+		{
+			"path": "/Volumes/XOUL/workspace/Smarteen/hambok-mentoring-flask/hamboklist"
+		}
+	]
+}

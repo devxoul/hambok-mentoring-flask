@@ -1,0 +1,6 @@
+if [ -f ./pid/hamboklist.pid ]
+then
+	./venv/bin/uwsgi --reload ./pid/hamboklist.pid
+else
+	./venv/bin/uwsgi ./hamboklist.ini --enable-threads
+fi

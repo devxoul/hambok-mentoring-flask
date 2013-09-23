@@ -18,8 +18,8 @@ def error(status_code, description):
 
 
 def logged_in_user():
-	user_id = session.get('user_id') or error(403, 'Not authorized.')
-	user = User.query.filter(User.id == user_id).first() or error(403, 'Not authorized.')
+	user_id = session.get('user_id') or error(401, 'Not authorized.')
+	user = User.query.filter(User.id == user_id).first() or error(401, 'Not authorized.')
 	return user
 
 

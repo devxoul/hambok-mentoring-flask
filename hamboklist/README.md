@@ -106,7 +106,7 @@ HTTP는 너무 방대한 내용이라 설명을 읽고 이해하기보다는, �
 
 <br />
 
-##### 1.4.1.3 HTTP Method
+##### 1.4.1.3 HTTP Methods
 
 HTTP 요청을 보낼 때에는 몇 가지 방법을 통해 보낼 수 있다. HTTP에는 여러가지 메소드가 있지만 가장 많이 사용되는 것은 GET, POST, PUT, DELETE 4가지이다. 각각은 주로 다음과 같은 기능을 할 때 사용된다.
 
@@ -581,6 +581,382 @@ Flask를 설치하면 Jinja2, Werkzeug 등 다른 패키지들도 함께 설치�
 
 <br />
 
+#### 2.1.3 Hello, World! 출력하기
+
+가장 기본적인 예제를 만들어보자. 이 예제는 [Flask 공식 웹사이트](http://flask.pocoo.org/)의 메인에도 있는 예제이다.
+
+작업환경의 루트폴더에 hamboklist.py라는 파일을 만들어보자. 이 파일의 이름이 여러분이 만드는 Flask 애플리케이션의 이름이 될 것이다. hamboklist.py에는 아래의 내용을 입력하면 된다.
+
+```
+from flask import Flask
+
+app = Flask(__name__)
+
+@app.route('/')
+def hello():
+	return 'Hello, World!'
+
+if __name__ == '__main__':
+	app.run()
+```
+
+저장 후, 해당 파일을 python으로 실행해보자.
+
+```
+(venv)$ python hamboklist.py
+ * Running on http://127.0.0.1:5000/
+```
+
+Flask 웹서버가 로컬호스트(127.0.0.1)의 5000번 포트에서 실행되고 있다는 말이 나온다. 인터넷 브라우저를 켜서 주소창에 <http://127.0.0.1:5000>를 입력해서 들어가면 'Hello, World!'라는 텍스트가 보일 것이다. 실행중인 애플리케이션을 종료하려면 `Ctrl`키와 `C` 키를 함께 누르면 된다.
+
+
+> **Host와 Port 직접 설정하기**
+>
+> 만약 로컬호스트가 아닌 다른 곳에서 Flask 애플리케이션을 실행한다면, `app.run()`에 인자를 넣어주면 된다. host의 기본값은 '127.0.0.1'이고, port의 기본값은 5000이다.
+>
+> 아래의 코드는 모든 호스트(0.0.0.0)에서 8080포트로 접근이 가능하도록 Flask를 실행하는 코드이다.
+>
+```
+app.run(host='0.0.0.0', port=8080)
+```
+
+<br />
+
+> **Debug Mode로 Flask 실행하기**
+>
+> `app.run()` 함수에 `debug=True` 옵션을 주면 디버그모드로 Flask를 실행할 수 있다. 디버그모드로 실행할 경우 메모리를 많이 먹게 되고 성능이 저하되므로 런칭시에는 Debug 옵션을 빼주도록 하자.
+
+<br />
+
+### 2.2 Flask 익히기
+
+#### 2.2.1 Routing
+
+##### 2.2.1.1 기본적인 URL 패턴
+
+Flask에서는 매우 직관적인 URL Pattern을 지원한다. 첫 번째 Hello World 예제에서도 볼 수 있듯, `@app.route` 데코레이터(Decorator)로 함수를 지정하면, 그 함수에서 리턴한 결과가 실제로 클라이언트로 전송된다.
+
+그럼, 작성한 코드를 아래와 같이 변경해보자.
+
+```
+@app.route('/')
+def index():
+	return 'It Works!'
+	
+@app.route('/hello')
+def hello():
+	return 'Hello, World!'
+```
+
+그리고, 인터넷 브라우저에서 <http://127.0.0.1:5000>과 <http://127.0.0.1:5000/hello>에 접속해보자. 각각 'It Works!'와 'Hello, World!'가 보이는 것을 확인할 수 있다.
+
+<br />
+
+##### 2.2.1.2 동적 URL 패턴
+
+이번에는 동적 URL을 다루기 위해 아래의 코드를 추가시켜보자.
+
+```
+@app.route('/user/<username>')
+def get_user(username):
+	return 'User %s' % username
+```
+
+인터넷 브라우저에서 <http://127.0.0.1:5000/user/xoul>로 접속해보자.'User xoul'이라는 결과를 볼 수 있다. URL을 지정해줄 때 '<'와 '>' 사이에 있는 변수가 함수의 인자로 넘어오게 된다. 변수가 여러 개라면 여러 개의 함수 인자를 선언해주면 된다.
+
+만약 변수가 정수형이라면, `int:`를 추가시켜주면 된다.
+
+```
+@app.route('/post/<int:post_id>')
+def get_post(post_id):
+	return 'Post %d' % post_id
+```
+
+> **한글 대응하기**
+>
+> 만약 username에 영문이 아닌 유니코드를 입력하게되면 Python에러가 출력될 것이다. 유니코드를 처리하지 않아서 발생하는 에러인데, hamboklist.py의 제일 윗줄에 `# -*- coding: utf-8 -*-`을 추가시켜주면 된다.
+
+<br />
+
+##### 2.2.1.3 HTTP Methods
+
+Flask에서는 각 URL별로 허용하는 메소드를 지정할 수 있고, 요청을 받은 메소드에 따라 다른 행동을 취하도록 개발할 수 있다. `@app.route` 데코레이터에서 `methods`에 메소드 리스트를 인자로 넘기면 그 함수에서는 해당 메소드만을 처리한다. 허용되지 않은 메소드로 요청을 보내면 '405 Method Not Allowed' 에러가 발생한다.
+
+어떤 메소드로 요청이 들어왔는지를 확인하려면 `request`객체의 `method`를 확인해보면 된다. `request`를 사용하려면 아래와 같이 import를 해주어야 한다.
+
+```
+from flask import Flask, request
+
+...
+
+@app.route('/login', methods=['GET', 'POST'])
+def login():
+	if request.method == 'GET':
+		return 'Show login form'
+
+	elif request.method == 'POST':
+		return 'Do login'
+```
+
+<br />
+
+#### 2.2.2 요청 데이터 받아오기
+
+##### 2.2.2.1 URL Parameter
+
+`http://google.com/search?q=123`에서 `q=123`과 같이 URL 뒤에 오는 URL Parameter는 `request` 객체의 `args` 속성을 통해서 받아올 수 있다.
+
+```
+query = request.args.get('q')
+```
+
+<br />
+
+##### 2.2.2.2 Form
+
+POST와 PUT 등의 요청에는 HTTP Body에 Form Data를 첨부할 수 있다. 이 데이터는 `request` 객체의 `form` 속성을 통해서 받아올 수 있다. 아래 코드는 POST 요청에서 이메일과 비밀번호를 받아오는 코드이다. `abort()`를 사용해서 이메일이 없거나 비밀번호가 빠졌을 경우 에러를 리턴한다.
+
+```
+from flask import Flask, request, abort
+
+...
+
+@app.route('/login', methods=['POST'])
+def login():
+	if request.method == 'POST':
+		email = request.form.get('email') or abort(400, 'Email is needed.')
+		password = request.form.get('password') or abort(400, 'Password is needed.')
+		...
+```
+
+<br />
+
+##### 2.2.2.3 파일 업로드
+
+업로드된 파일은 `request.files`를 통해 접근이 가능하다. 아래 소스코드는 POST 요청을 통해 업로드된 사진을 `/var/www/media/` 위치에 파일의 이름을 사용해서 저장하는 코드이다.
+
+```
+from flask import Flask, request, abort
+from werkzeug import secure_filename
+
+...
+
+@app.route('/photo', methods=['POST'])
+def upload_photo():
+	photo = request.files.get('photo') or abort(400, 'Photo is needed.')
+	photo.save('/var/www/media/' + secure_filename(photo.filename))
+	...
+```
+
+<br />
+
+#### 2.2.3 응답(Response)
+
+우리는 여태까지 route 함수에서 단순 문자열만 리턴해보았다. Flask에서는 route 함수에서 문자열 객체가 리턴될 경우 Response 객체로 만들어서 클라이언트에 전송해준다. 그럼, 문자열이 아니라 JSON을 리턴하거나, 또는 상태코드를 지정하는 방법에 대해 알아보자.
+
+##### 2.2.3.1 JSON 객체로 응답 보내기
+
+JSON 객체로 응답을 보내려면, 우리가 직접 JSON 객체를 담은 Response 객체를 생성해서 리턴을 해주어야 한다.
+
+먼저 JSON 데이터를 만드는 방법은, `json` 모듈의 `dumps` 메소드를 이용하면 된다. 아래 코드는 새로운 `dict` 객체를 만들고, 속성을 지정해준 뒤 JSON 문자열로 만들어 출력하는 코드이다.
+
+```
+import json
+
+user = dict()
+user['id'] = 1
+user['email'] = 'devxoul@gmail.com'
+user['name'] = 'Su Yeol Jeon'
+
+print json.dumps(user)
+```
+
+위 코드를 실행하면 `'{"id": 1, "name": "Su Yeol Jeon", "email": "devxoul@gmail.com"}'`과 같은 결과가 나온다.
+
+`dict` 객체는 다음과 같은 리터럴 방식으로도 선언할 수 있다.
+
+```
+user = {
+	'id': 1,
+	'email': 'devxoul@gmail.com',
+	'name': 'Su Yeol Jeon'
+}
+```
+
+이제, 만들어진 JSON 데이터를 Response 객체로 만들어 리턴해보자. 아래 코드는 이메일과 비밀번호, 이름을 받아 사용자 정보를 JSON 형태로 리턴해주는 코드이다.
+
+```
+from flask import Flask, request, abort
+import json
+
+...
+
+@app.route('/signup', methods=['POST'])
+def signup():
+	if request.method == 'POST':
+		email = request.form.get('email') or abort(400, 'Email is needed.')
+		password = request.form.get('password') or abort(400, 'Password is needed.')
+		name = request.form.get('password') or abort(400, 'Name is needed.')
+		
+		user = {
+			'email': email,
+			'name': name
+		}
+
+		return Response(json.dumps(user), mimetype='application/json')
+```
+
+<br />
+
+##### 2.2.3.2 상태코드(Status Code) 설정하기
+
+요청 결과가 정상적으로 수행이 되었는지, 혹은 에러가 발생했으면 어떠한 에러가 발생했는지는 Response 객체의 바디에 담아서도 전송할 수 있다. 하지만 HTTP의 표준에 맞게 하려면, HTTP Response의 상태코드에 약속된 코드를 넣어주어야 한다.
+
+상태코드는 3자리 숫자로, 1xx는 조건부 응답, 2xx는 성공, 3xx는 리다이렉션, 4xx는 요청 오류, 5xx는 서버 오류에 사용된다.
+
+HTTP에서 가장 많이 사용되는 상태코드들은 다음과 같다.
+
+| 상태코드 | 설명 |
+|---|---|
+| 200 *OK* | 성공 |
+| 201 *Created* | 리소스가 생성되었다. POST 요청의 응답에 주로 쓰인다. |
+| 301 *Moved Permanently*  | 리소스 위치가 바뀌었다. 리다이렉션이 필요하다. |
+| 400 *Bad Request*  | 요청이 잘못되었다. 필요한 파라미터가 없는 경우에 주로 쓰인다. |
+| 401 *Unauthorized* | 인증되지 않아 권한이 없다. |
+| 403 *Forbidden* | 서버가 요청을 거부하고 있다. |
+| 404 *Not Found* | 요청한 페이지를 찾을 수 없다. |
+| 405 *Method Not Allowed* | 해당 URL에 허용되지 않은 메소드로 요청을 보냈다. |
+| 500 *Internal Server Error* | 서버에서 오류가 발생하여 요청을 처리할 수 없다. |
+
+상태코드는 Response 객체를 생성할 때 `status` 인자를 통해 설정할 수 있다.
+
+```
+return Response(json.dumps(user), mimetype='application/json', status=201)
+```
+
+<br />
+
+
+### 2.3 햄볶리스트 개발하기
+
+서론이 존나 길었다. 이제 진짜로 개발을 시작해보자. 신난다.
+
+#### 2.3.1 hamboklist.py
+
+우리가 처음에 만들었던 `hamboklist.py`가 햄볶리스트 프로젝트의 메인 파일이다. 이제, 1.4에서 설계한 API대로 코딩을 해보자. 먼저, route와 함수를 먼저 매칭시켜놓는다. 빈 함수를 만들기 위해서 함수 내부에는 `pass`만 써놓는다.
+
+```
+from flask import Flask
+
+app = Flask(__name__)
+
+
+#
+# User
+#
+
+@app.route('/login', methods=['POST'])
+def login():
+	pass
+
+
+@app.route('/logout', methods=['POST'])
+def logout():
+	pass
+
+	
+@app.route('/user', methods=['POST'])
+def post_user():
+	pass
+
+	
+@app.route('/user', methods=['GET'])
+def get_user(user_id):
+	pass
+	
+
+@app.route('/user', methods=['PUT'])
+def put_user(user_id):
+	pass
+	
+
+@app.route('/user', methods=['DELETE'])
+def delete_user(user_id):
+	pass
+	
+
+#
+# List
+#
+
+@app.route('/lists', methods=['GET'])
+def get_lists():
+	pass
+	
+
+@app.route('/list/<int:list_id>', methods=['GET'])
+def get_list(list_id):
+	pass
+	
+
+@app.route('/list', methods=['POST'])
+def post_list():
+	pass
+	
+
+@app.route('/list/<int:list_id>', methods=['PUT'])
+def put_list(list_id):
+	pass
+	
+
+@app.route('/list/<int:list_id>', methods=['DELETE'])
+def delete_list(list_id):
+	pass
+	
+
+#
+# Task
+#
+
+@app.route('/list/<int:list_id>/task', methods=['POST'])
+def post_list_task(list_id):
+	pass
+	
+
+@app.route('/task/<int:task_id>', methods=['PUT'])
+def put_task(task_id):
+	pass
+	
+
+@app.route('/task/<int:task_id>', methods=['DELETE'])
+def delete_task(task_id):
+	pass
+```
+
+하.. 시바 존나힘들군.
+
+이 코드들이 이해가 잘 되어야 한다. 만약 이해가 안된다면 문서를 처음부터 다시 정독하고 오길. 이거 절대로 복붙하지말고 힘들더라도 코드 보면서 하나하나 손으로 타이핑해라. 그래야 몸이 기억한다. 진짜로.
+
+<br />
+
+#### 2.3.2 model.py
+
+
+
+
+
+
+
+
+<br />
+
+---
+
+**밑은 아직 읽지마셈**
+
+---
+
+<br />
 
 ### 2.2 Flask 프로젝트 구조 설계
 
@@ -603,7 +979,7 @@ Flask를 설치하면 Jinja2, Werkzeug 등 다른 패키지들도 함께 설치�
 (venv)$ touch hamboklist/__init__.py
 ```
 
-디렉토리를 만들고, 그 디렉토리를 패키지로 만들기 위해 touch 명령어로 \_\_init__.py라는 빈 파일을 생성했다. 같은 방법으로 `app.py`, `database.py`, `model.py`를 `hamboklist` 패키지 안에 만들자. 그리고 `views` 패키지를 만들고 `api.py`를 그 안에 넣어주자.
+디렉토리를 만들고, 그 디렉토리를 패키지로 만들기 위해 touch 명령어로 \_\_init__.py라는 빈 파일을 생성했다. 같은 방법으로 `app.py`, `database.py`, `model.py`를 `hamboklist` 패키지 안에 만들자. 그리고 `views` 패키지를 만들고 `app.py`를 그 안에 넣어주자.
 
 여기까지 했으면 디렉토리가 아래와 같은 구조로 되어있을 것이다. (venv 내부는 생략)
 
@@ -616,7 +992,7 @@ hamboklist
 |	|-- model.py
 |	`-- views
 |		|-- __init__.py
-|		`-- api.py
+|		`-- app.py
 `-- venv
 ```
 
@@ -635,7 +1011,7 @@ hamboklist
 ### 2.5 model.py
 
 
-### 2.6 api.py
+### 2.6 app.py
 
 
 

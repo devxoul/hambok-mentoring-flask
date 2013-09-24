@@ -46,7 +46,7 @@ def login():
 	return json_response(user.dictify()), 201
 
 
-@api.route('/logout', methods=['GET'])
+@api.route('/logout', methods=['POST'])
 def logout():
 	logged_in_user()
 	session.pop('user_id')
@@ -211,4 +211,3 @@ def delete_task(task_id):
 	db.session.delete(task)
 	db.session.commit()
 	return json_response()
-
